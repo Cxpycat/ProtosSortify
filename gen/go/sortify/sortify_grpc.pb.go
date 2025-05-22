@@ -2,7 +2,7 @@
 // versions:
 // - protoc-gen-go-grpc v1.5.1
 // - protoc             v5.29.3
-// source: sso/sso.proto
+// source: sortify/sortify.proto
 
 package sortify_v1
 
@@ -19,8 +19,8 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	Sortify_AuthByCode_FullMethodName = "/auth.Sortify/AuthByCode"
-	Sortify_User_FullMethodName       = "/auth.Sortify/User"
+	Sortify_AuthByCode_FullMethodName = "/sortify.Sortify/AuthByCode"
+	Sortify_User_FullMethodName       = "/sortify.Sortify/User"
 )
 
 // SortifyClient is the client API for Sortify service.
@@ -142,7 +142,7 @@ func _Sortify_User_Handler(srv interface{}, ctx context.Context, dec func(interf
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var Sortify_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "auth.Sortify",
+	ServiceName: "sortify.Sortify",
 	HandlerType: (*SortifyServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -155,5 +155,5 @@ var Sortify_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "sso/sso.proto",
+	Metadata: "sortify/sortify.proto",
 }
