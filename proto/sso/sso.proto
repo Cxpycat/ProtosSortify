@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package auth;
+
+option go_package = "sortify.v1";
+
+service Sortify {
+  rpc AuthByCode (AuthByCodeRequest) returns (AuthByCodeResponse);
+  rpc User (UserRequest) returns (UserResponse);
+}
+
+message AuthByCodeRequest {
+  string code = 1;
+  string state = 2;
+}
+
+message AuthByCodeResponse {
+  int64 user_id = 1;
+}
+
+message UserRequest {
+  int64 user_id = 1;
+}
+
+message UserResponse {
+  string display_name = 1;
+  string email = 2;
+  string spotify_id = 3;
+  string image_url = 4;
+}
